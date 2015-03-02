@@ -3,9 +3,7 @@ using System.Collections;
 
 public class Glasses : MonoBehaviour {
 	
-	Player player;
-	public int Pre_min;
-	public int Pre_max;
+	public int Pre_min, Pre_max;
 
 	int perscription()
 	{
@@ -15,7 +13,7 @@ public class Glasses : MonoBehaviour {
 	void OnTriggerEnter(Collider col)
 	{
 		//generates the glasses perscription number then destroys self;
-		player = col.GetComponent<Player>();
+		Player player = col.GetComponent<Player>();
 		player.perscription = perscription();
 		Destroy(this.gameObject);
 	}
