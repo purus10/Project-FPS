@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CameraEffects : MonoBehaviour {
 
-	public Color mask_on, mask_off;
+	public Color mask_on;
+	private Color mask_off;
 
 	void Start()
 	{

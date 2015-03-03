@@ -6,18 +6,7 @@ public class Player : MonoBehaviour {
 	static public bool reg_vision = true;
 	public GameObject monster;
 	public KeyCode mask_button;
-	public int perscription = -1;
-
-	public Rect vision;
-	public Rect persc_label;
-
-	void OnGUI()
-	{
-		GUI.Box(vision,"Perscription Value");
-		GUI.Label(persc_label, perscription.ToString());
-	}
-
-
+	
 	void Mask()
 	{
 		Transform[] search = GameObject.FindObjectsOfType(typeof(Transform)) as Transform[];
