@@ -41,7 +41,6 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_WIN
 Assets/Sciprt/CameraEffects.cs
-Assets/Sciprt/Glasses.cs
 Assets/Sciprt/Monster.cs
 Assets/Sciprt/Player.cs
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"

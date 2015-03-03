@@ -22,8 +22,11 @@ public class Player : MonoBehaviour {
 	{
 		Transform[] search = GameObject.FindObjectsOfType(typeof(Transform)) as Transform[];
 		
-		foreach(Transform t in search) 
-			if (t.renderer != null && t.name != monster.name) t.renderer.enabled = reg_vision;
+		foreach (Transform t in search) 
+		{
+			Visible v = t.GetComponent<Visible>();
+			if (t.renderer != null && v == null && t.name != monster.name) t.renderer.enabled = reg_vision;
+		}
 	}
 
 	// Input button to put mask on and renderers appropriate objects.

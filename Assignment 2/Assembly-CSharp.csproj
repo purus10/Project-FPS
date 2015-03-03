@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Sciprt\CameraEffects.cs" />
-     <Compile Include="Assets\Sciprt\Glasses.cs" />
      <Compile Include="Assets\Sciprt\Monster.cs" />
      <Compile Include="Assets\Sciprt\Player.cs" />
+     <Compile Include="Assets\Sciprt\Visible.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
