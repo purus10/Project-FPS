@@ -8,13 +8,13 @@ public class CameraEffects : MonoBehaviour {
 
 	void Start()
 	{
-		mask_off = camera.backgroundColor;
+		mask_off = GetComponent<Camera>().backgroundColor;
 	}
 
 	//Changes camera background when maskon
 	void FixedUpdate () {
 	
-		if (!Player.reg_vision) camera.backgroundColor = mask_on;
-		else camera.backgroundColor = mask_off;
+		if (!Player.reg_vision) GetComponent<Camera>().backgroundColor = mask_on;
+		else GetComponent<Camera>().backgroundColor = mask_off;
 	}
 }

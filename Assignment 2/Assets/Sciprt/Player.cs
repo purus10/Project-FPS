@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 		foreach (Transform t in search) 
 		{
 			Visible v = t.GetComponent<Visible>();
-			if (t.renderer != null && v == null && t.name != monster.name) t.renderer.enabled = reg_vision;
+			if (t.GetComponent<Renderer>() != null && v == null && t.name != monster.name) t.GetComponent<Renderer>().enabled = reg_vision;
 		}
 	}
 

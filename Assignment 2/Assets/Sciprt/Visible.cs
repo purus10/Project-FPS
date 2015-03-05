@@ -7,9 +7,9 @@ public class Visible : MonoBehaviour {
 	void Update () {
 
 		if (!Player.reg_vision)
-			renderer.enabled = true;
+			GetComponent<Renderer>().enabled = true;
 		else
-			renderer.enabled = false;
+			GetComponent<Renderer>().enabled = false;
 	
 	}
 }

@@ -9,15 +9,15 @@ public class Monster : MonoBehaviour {
 
 	void Start()
 	{
-		mask_off = renderer.material.color;
+		mask_off = GetComponent<Renderer>().material.color;
 	}
 
 	// Changes monsters color and has it face the character when mask on.
 	void FixedUpdate () 
 	{
-		if (Player.reg_vision) renderer.material.color = mask_off;
+		if (Player.reg_vision) GetComponent<Renderer>().material.color = mask_off;
 		else{ 
-			renderer.material.color = mask_on;
+			GetComponent<Renderer>().material.color = mask_on;
 			transform.LookAt(player);
 		}
 	}
