@@ -25,7 +25,6 @@ public class Player : MonoBehaviour {
 		{
 			if (reg_vision) reg_vision = false;
 			else reg_vision = true;
-
 			Mask();
 		}
 	}

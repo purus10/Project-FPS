@@ -4,7 +4,6 @@ using System.Collections;
 public class PressF : MonoBehaviour {
 
 	public TextMesh pressf;
-	public GameObject cam;
 	Color o_color;
 	int t;
 	public bool fade = true;
@@ -16,10 +15,8 @@ public class PressF : MonoBehaviour {
 	
 	void Update () 
 	{
-		if (Player.reg_vision == false)
-		{
-			pressf.GetComponent<Renderer>().enabled = false;
-		}else{
+		if (Player.reg_vision == false) pressf.GetComponent<Renderer>().enabled = false;
+		else{
 			if (fade == true && Player.reg_vision == true)
 			{
 				t++;
@@ -36,10 +33,9 @@ public class PressF : MonoBehaviour {
 		}
 	}
 
-
 	void OnTriggerEnter()
 	{
-		Application.LoadLevel("SampleLevel");
+		Application.LoadLevel("FeatureTest");
 		Player.reg_vision = true;
 	}
 }
