@@ -29,7 +29,8 @@ public class PressF : MonoBehaviour {
 
 	void OnTriggerEnter()
 	{
-		Application.LoadLevel("FeatureTest");
-		Player.reg_vision = true;
+        if(Player.reg_vision == false)
+            Application.LoadLevel("FeatureTest");
+            Player.reg_vision = true;
 	}
 }
