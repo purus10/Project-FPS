@@ -4,7 +4,7 @@ using System.Collections;
 public class PressF : MonoBehaviour {
 
 	public TextMesh pressf;
-	Color o_color;
+	private Color o_color = Color.clear;
 	int t;
 	public bool fade = true;
 
