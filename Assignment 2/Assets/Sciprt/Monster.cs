@@ -7,7 +7,7 @@ public class Monster : MonoBehaviour {
 	public float mask_speed, run_speed;
 	public Transform player;
 
-	float t;
+	public float t;
 	NavMeshAgent agent;
 	Color mask_off;
 
