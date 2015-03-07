@@ -4,15 +4,9 @@ using System.Collections;
 public class PressF : MonoBehaviour {
 
 	public TextMesh pressf;
-	private Color o_color = Color.clear;
 	int t;
 	public bool fade = true;
 
-	void Start()
-	{
-		o_color = pressf.color;
-	}
-	
 	void Update () 
 	{
 		if (Player.reg_vision == false) pressf.GetComponent<Renderer>().enabled = false;

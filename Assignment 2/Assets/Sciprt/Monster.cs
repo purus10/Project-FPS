@@ -3,9 +3,8 @@ using System.Collections;
 
 public class Monster : MonoBehaviour {
 	
-	public float wait_time;
+	public float wait_frames;
 	public float mask_speed, run_speed;
-	public Color mask_on;
 	public Transform player;
 
 	float t;
@@ -14,7 +13,7 @@ public class Monster : MonoBehaviour {
 
 	void Start()
 	{
-		mask_off = GetComponentInChildren<Renderer>().material.color;
+		mask_off = GetComponent<SpriteRenderer>().color;
 		agent = GetComponent<NavMeshAgent>();
 	}
 
@@ -38,16 +37,16 @@ public class Monster : MonoBehaviour {
 		{
 			t++;
 			agent.speed = mask_speed;
-			if (t >= wait_time) agent.SetDestination(player.position);
+			if (t >= wait_frames) agent.SetDestination(player.position);
 		}else  if (t > 0) t--;
 	}
 
 	// Changes monsters color and has it face the character when mask on.
 	void FixedUpdate () 
 	{
-		if (Player.reg_vision) GetComponentInChildren<Renderer>().material.color = mask_off;
+		if (Player.reg_vision) GetComponent<SpriteRenderer>().color = mask_off;
 		else{ 
-			GetComponent<Renderer>().material.color = mask_on;
+			GetComponent<SpriteRenderer>().color = Color.cyan;
 			transform.LookAt(player);
 		}
 	}
