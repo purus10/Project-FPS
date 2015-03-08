@@ -52,7 +52,6 @@
      <Compile Include="Assets\Sciprt\Finish.cs" />
      <Compile Include="Assets\Sciprt\Footsteps.cs" />
      <Compile Include="Assets\Sciprt\Monster.cs" />
-     <Compile Include="Assets\Sciprt\Music.cs" />
      <Compile Include="Assets\Sciprt\Player.cs" />
      <Compile Include="Assets\Sciprt\PressF.cs" />
      <Compile Include="Assets\Sciprt\SpawnMonster.cs" />
