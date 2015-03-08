@@ -49,6 +49,7 @@
      <Compile Include="Assets\Sciprt\CameraEffects.cs" />
      <Compile Include="Assets\Sciprt\Footsteps.cs" />
      <Compile Include="Assets\Sciprt\Monster.cs" />
+     <Compile Include="Assets\Sciprt\Music.cs" />
      <Compile Include="Assets\Sciprt\Player.cs" />
      <Compile Include="Assets\Sciprt\PressF.cs" />
      <Compile Include="Assets\Sciprt\TitleWoosh.cs" />
