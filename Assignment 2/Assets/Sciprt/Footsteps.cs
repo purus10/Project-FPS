@@ -15,7 +15,7 @@ public class Footsteps : MonoBehaviour
         {
             if(controller.isGrounded && controller.velocity.magnitude >0.3F)
             {
-                PlaySound(footsteps[Random.Range(0,footsteps.Length)], 1f);
+                PlaySound(footsteps[Random.Range(0,footsteps.Length)], 0.1f);
                 yield return new WaitForSeconds(nextFoot);
             }   
             else

@@ -13,9 +13,9 @@ public class Music : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         if (Player.reg_vision)
-            PlaySound(Music1, 0.2f);
+            PlaySound(Music1, 0.3f);
         else if (Player.reg_vision == false)
-            PlaySound(Ambi1, 0.4f);
+            PlaySound(Ambi1, 0.3f);
 	}
 	
 	// Update is called once per frame
