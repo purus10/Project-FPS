@@ -2,12 +2,10 @@
 using System.Collections;
 
 public class Finish : MonoBehaviour {
-	
 
-	// Update is called once per frame
 		void Update()
 		{
-			if (Input.anyKeyDown)
+			if (Input.GetKeyDown(KeyCode.F))
 			{
 				Application.Quit();
 			}
