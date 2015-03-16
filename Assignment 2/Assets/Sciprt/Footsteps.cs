@@ -13,7 +13,7 @@ public class Footsteps : MonoBehaviour
 	    CharacterController controller = GetComponent<CharacterController>();
         while(true)
         {
-            if(controller.isGrounded && controller.velocity.magnitude >0.3F)
+            if(controller.isGrounded && controller.velocity.magnitude >0.2F)
             {
                 PlaySound(footsteps[Random.Range(0,footsteps.Length)], 0.1f);
                 yield return new WaitForSeconds(nextFoot);
