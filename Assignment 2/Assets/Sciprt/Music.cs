@@ -4,8 +4,8 @@ using System.Collections;
 public class Music : MonoBehaviour 
 {
 
-    public AudioClip Music1;
-    public AudioClip Ambi1;
+    public AudioSource Musical;
+    public AudioSource Ambi;
 
 
 	// Use this for initialization
@@ -13,28 +13,35 @@ public class Music : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         if (Player.reg_vision)
-            PlaySound(Music1, 0.3f);
-        else if (Player.reg_vision == false)
-            PlaySound(Ambi1, 0.3f);
+        {
+            Musical.Play();
+            Musical.volume = 0.5f;
+            Ambi.Play();
+            Ambi.volume = 0.0f;
+        }
+        else if (!Player.reg_vision)
+        {
+            Musical.Play();
+            Musical.volume = 0.0f;
+            Ambi.Play();
+            Ambi.volume = 0.7f;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
+
             if (Player.reg_vision)
-                PlaySound(Music1, 0.2f);
-            else if (Player.reg_vision == false)
-                PlaySound(Ambi1, 0.4f);
-        }
+            {
+                Musical.volume = 0.5f;
+                Ambi.volume = 0.0f;
+            }
+            else if (!Player.reg_vision)
+            {
+                Musical.volume = 0.0f;
+                Ambi.volume = 0.7f;
+            }
+        
 	}
-
-    void PlaySound(AudioClip m, float vol)
-    {
-        GetComponent<AudioSource>().clip = m;
-        GetComponent<AudioSource>().volume = vol;
-        GetComponent<AudioSource>().Play();
-    }
-
 }

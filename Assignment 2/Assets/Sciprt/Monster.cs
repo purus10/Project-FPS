@@ -6,6 +6,7 @@ public class Monster : MonoBehaviour {
 	public float wait_frames;
 	public float mask_speed, run_speed;
 	public Transform player;
+    public AudioSource Found;
 
 	public float t;
 	NavMeshAgent agent;
@@ -21,6 +22,7 @@ public class Monster : MonoBehaviour {
 	void OnTriggerStay(Collider col)
 	{
 		agent.speed = run_speed;
+        Found.Play();
 		if (col.gameObject == player.gameObject) agent.SetDestination(col.transform.position);
 	}
 

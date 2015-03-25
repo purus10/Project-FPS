@@ -5,7 +5,7 @@ public class TitleWoosh : MonoBehaviour {
 
     public AudioClip woosh;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if(other.tag == "Player" && GetComponent<Renderer>().enabled == true)
             AudioSource.PlayClipAtPoint(woosh, transform.position);
