@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sciprt\Monster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sciprt\Player.cs">
     <Files>
-      <File FileName="Assets\Sciprt\Finish.cs" Line="5" Column="1" />
-      <File FileName="Assets\Sciprt\Monster.cs" Line="18" Column="3" />
+      <File FileName="Assets\Sciprt\Player.cs" Line="47" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -8,6 +8,10 @@ public class Player : MonoBehaviour {
 	public AudioClip clip; //<--- you need this to drag the audio on in inspector;
 	public KeyCode mask_button;
 
+	void Start()
+	{
+		UnityEngine.Cursor.visible = false;
+	}
 
 	void PlaySound(AudioClip a, float vol)
 	{
