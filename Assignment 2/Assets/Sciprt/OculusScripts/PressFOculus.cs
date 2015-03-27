@@ -30,7 +30,7 @@ public class PressFOculus : MonoBehaviour {
 	void OnTriggerEnter()
 	{
         if(Player.reg_vision == false)
-            Application.LoadLevel("SampleLevel - Oculus");
+            Application.LoadLevel("SeeNoEvil");
             Player.reg_vision = true;
 	}
 }

@@ -6,6 +6,7 @@ public class Music : MonoBehaviour
 
     public AudioSource Musical;
     public AudioSource Ambi;
+    public AudioSource Ambi2;
 
 
 	// Use this for initialization
@@ -18,6 +19,8 @@ public class Music : MonoBehaviour
             Musical.volume = 0.5f;
             Ambi.Play();
             Ambi.volume = 0.0f;
+            Ambi2.Play();
+            Ambi2.volume = 0.0f;
         }
         else if (!Player.reg_vision)
         {
@@ -25,6 +28,8 @@ public class Music : MonoBehaviour
             Musical.volume = 0.0f;
             Ambi.Play();
             Ambi.volume = 0.7f;
+            Ambi2.Play();
+            Ambi2.volume = 0.5f;
         }
 	}
 	
@@ -36,11 +41,13 @@ public class Music : MonoBehaviour
             {
                 Musical.volume = 0.5f;
                 Ambi.volume = 0.0f;
+                Ambi2.volume = 0.0f;
             }
             else if (!Player.reg_vision)
             {
                 Musical.volume = 0.0f;
                 Ambi.volume = 0.7f;
+                Ambi2.volume = 0.5f;
             }
         
 	}
