@@ -7,6 +7,16 @@ public class Player : MonoBehaviour {
 	public GameObject monster;
 	public AudioClip clip; //<--- you need this to drag the audio on in inspector;
 	public KeyCode mask_button;
+	public GameObject[] door;
+
+	void Start()
+	{
+		foreach (GameObject d in door)
+		{
+			int Bool = Random.Range(0,2);
+			if (Bool == 1) d.GetComponent<Collider>().enabled = true;
+		}
+	}
 
 	void PlaySound(AudioClip a, float vol)
 	{

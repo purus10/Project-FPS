@@ -11,7 +11,7 @@ public class Door : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (!Player.reg_vision) 
+		if (!Player.reg_vision && GetComponent<Collider>().enabled == false) 
 		{
 			GetComponent<Renderer>().enabled = true;
 			GetComponent<Renderer>().material.color = Color.white;
