@@ -8,6 +8,7 @@ public class CameraEffects : MonoBehaviour {
 
 	void Start()
 	{
+		UnityEngine.Cursor.visible = false;
 		mask_off = GetComponent<Camera>().backgroundColor;
 	}
 
