@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
 	public AudioClip clip; //<--- you need this to drag the audio on in inspector;
 	public KeyCode mask_button;
 	public GameObject[] door;
+    private bool m_isAxisInUse = false;
 
 	void Start()
 	{
@@ -41,11 +42,23 @@ public class Player : MonoBehaviour {
 	// Input button to put mask on and renderers appropriate objects.
 	void FixedUpdate () 
 	{
-        if (Input.GetKeyDown(mask_button))
+        if (Input.GetKeyDown(mask_button) || Input.GetAxis("RBumper") != 0)
 		{
-			if (reg_vision) reg_vision = false;
-			else reg_vision = true;
-			Mask();
+                if(m_isAxisInUse == false)
+                {
+                    if (reg_vision) reg_vision = false;
+                    else reg_vision = true;
+                    Mask();
+                    m_isAxisInUse = true;
+                }
+	//		if (reg_vision) reg_vision = false;
+	//		else reg_vision = true;
+	//		Mask();
 		}
+        if (Input.GetAxis("RBumper") == 0)
+        {
+            m_isAxisInUse = false;
+        }
 	}
+    //
 }

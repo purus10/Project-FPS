@@ -4,8 +4,9 @@ using System.Collections;
 public class Pit : MonoBehaviour {
 
 	// Use this for initialization
-	void OnTriggerEnter () 
+	void OnTriggerEnter (Collider cat) 
 	{
+        if (cat.tag == "Player") 
 		Application.LoadLevel("StartMenu - Oculus");
 	}
 	

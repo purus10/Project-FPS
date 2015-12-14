@@ -30,7 +30,7 @@ public class PressF : MonoBehaviour {
 	void OnTriggerEnter()
 	{
         if(Player.reg_vision == false)
-            Application.LoadLevel("SampleLevel");
+            //Application.LoadLevel("SampleLevel");
             Player.reg_vision = true;
 	}
 }

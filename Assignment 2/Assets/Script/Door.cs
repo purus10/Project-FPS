@@ -15,7 +15,9 @@ public class Door : MonoBehaviour {
 		{
 			GetComponent<Renderer>().enabled = true;
 			GetComponent<Renderer>().material.color = Color.white;
-		}else{ 
+		}
+        else
+        { 
 			GetComponent<Renderer>().material.color = door;
 		}
 	}
