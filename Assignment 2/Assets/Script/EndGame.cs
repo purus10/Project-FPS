@@ -3,9 +3,10 @@ using System.Collections;
 
 public class EndGame : MonoBehaviour {
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider fun)
 	{
-		if(Player.reg_vision == false)
+
+		if (fun.tag == "Player")
 			Application.LoadLevel("EndGame");
 		Player.reg_vision = true;
 	}
